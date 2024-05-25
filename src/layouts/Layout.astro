@@ -1,0 +1,46 @@
+---
+import '../styles/global.css'
+import { Image } from 'astro:assets';
+import Logo from '../assets/logo.svg';
+import Button from "../components/Button.astro";
+
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Astro description" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body>
+	<header class="fixed top-4 left-0 w-full">
+		<div class="container">
+			<div class="bg-background/75 rounded-xl backdrop-blur-lg px-2 py-2">
+				<div class="flex justify-between items-center">
+					<Image src={Logo} alt="Lapzy" class="h-9" />
+					<div>
+						<a href="https://app.lapzy.nl/login" class="bg-background hover:bg-muted h-10 px-4 py-2 mr-4 inline-flex items-center justify-center whitespace-nowrap rounded-lg font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2">Inloggen</a>
+						<a href="https://app.lapzy.nl/register" class="bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2 inline-flex items-center justify-center whitespace-nowrap rounded-lg font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2">Nu registreren</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+	<div class="container">
+		<slot />
+	</div>
+	</body>
+</html>
+
+<style is:global>
+
+</style>

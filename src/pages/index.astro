@@ -1,0 +1,42 @@
+---
+import Layout from '../layouts/Layout.astro';
+import MockUp from '../assets/mock-up.webp';
+import { Image } from 'astro:assets';
+---
+
+<Layout title="Lapzy - Jouw MX performance platform">
+    <main>
+        <section id="intro" class="h-screen">
+            <div class="flex items-center h-full">
+                <div class="col-span-4">
+                    <h1 class="text-7xl font-extrabold font-display tracking-relaxed mb-8">
+                        Track jouw motorcross <br/>
+                        <span class="bg-clip-text text-transparent bg-gradient-to-r from-primary to-indigo-500">performance</span>
+                    </h1>
+                    <p class="text-xl text-muted-foreground tracking-relaxed max-w-xl mb-12">
+                        Met Lapzy heb je al jouw sessies en prestaties op één plek. Leg je snelste rondetijden vast en
+                        deel deze met je vrienden.
+                    </p>
+                    <div class="flex gap-6">
+                        <a href="https://app.lapzy.nl" class="bg-primary text-primary-foreground hover:bg-primary/90 shadow-[0_8px_25px_-5px_rgba(0,0,0,0.25)] shadow-xl h-14 text-lg px-8 py-2 inline-flex items-center justify-center whitespace-nowrap rounded-lg font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2">Aan de slag</a>
+                        <a href="#features" class="bg-background hover:bg-muted shadow-[0_8px_25px_-5px_rgba(0,0,0,0.25)] h-14 text-lg px-8 py-2 border border-border inline-flex items-center justify-center whitespace-nowrap rounded-lg font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2">Meer over Lapzy</a>
+                    </div>
+                </div>
+                <div class="relative h-full mr-8">
+                    <Image src={MockUp} alt="Lapzy iPhone mockup" />
+                    <!--<Image src={MockUp} alt="Lapzy iPhone mockup" class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" />-->
+                </div>
+            </div>
+        </section>
+
+		<section id="features">
+			<div class="grid grid-cols-3">
+
+			</div>
+		</section>
+    </main>
+</Layout>
+
+<style>
+
+</style>
