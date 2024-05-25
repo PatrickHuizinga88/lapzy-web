@@ -24,12 +24,12 @@ const { title } = Astro.props;
 	<body>
 	<header class="fixed top-4 left-0 w-full">
 		<div class="container">
-			<div class="bg-background/75 rounded-xl backdrop-blur-lg px-2 py-2">
+			<div class="bg-background/75 rounded-xl backdrop-blur-lg p-2">
 				<div class="flex justify-between items-center">
 					<Image src={Logo} alt="Lapzy" class="h-9" />
-					<div>
-						<a href="https://app.lapzy.nl/login" class="bg-background hover:bg-muted h-10 px-4 py-2 mr-4 inline-flex items-center justify-center whitespace-nowrap rounded-lg font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2">Inloggen</a>
-						<a href="https://app.lapzy.nl/register" class="bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2 inline-flex items-center justify-center whitespace-nowrap rounded-lg font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2">Nu registreren</a>
+					<div class="flex gap-2 sm:gap-4">
+						<a href="https://app.lapzy.nl/login" class="hover:bg-muted text-sm h-10 px-4 py-2 inline-flex items-center justify-center whitespace-nowrap rounded-lg font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2">Inloggen</a>
+						<a href="https://app.lapzy.nl/register" class="bg-primary text-primary-foreground hover:bg-primary/90 text-sm h-10 px-4 py-2 inline-flex items-center justify-center whitespace-nowrap rounded-lg font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2">Nu registreren</a>
 					</div>
 				</div>
 			</div>
