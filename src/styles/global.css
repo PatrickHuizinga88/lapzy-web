@@ -28,13 +28,41 @@
 
         --radius: 0.5rem;
     }
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        @apply text-foreground;
+        @apply bg-background;
+    }
 }
 
-html {
-    scroll-behavior: smooth;
+[data-aos="custom-fade-up"] {
+    transform: translateY(1rem);
+    opacity: 0;
+    transition: ease-out;
+}
+[data-aos="custom-fade-up"].aos-animate {
+    transform: translateY(0);
+    opacity: 1;
 }
 
-body {
-    @apply text-foreground;
-    @apply bg-background;
+[data-aos="custom-fade-in"] {
+    opacity: 0;
+    transition: ease-out;
+}
+[data-aos="custom-fade-in"].aos-animate {
+    opacity: .2;
+}
+
+[data-aos="custom-fade-down"] {
+    transform: translate(1rem, -1rem);
+    opacity: 0;
+    transition: ease-out;
+}
+[data-aos="custom-fade-down"].aos-animate {
+    transform: translateY(0);
+    opacity: 1;
 }
