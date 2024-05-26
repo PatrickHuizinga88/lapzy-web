@@ -17,6 +17,9 @@ dependencies:
   class-variance-authority:
     specifier: ^0.7.0
     version: 0.7.0
+  lucide-astro:
+    specifier: ^0.379.0
+    version: 0.379.0(astro@4.9.1)
   sharp:
     specifier: ^0.33.4
     version: 0.33.4
@@ -2549,6 +2552,14 @@ packages:
     resolution: {integrity: sha512-KpNARQA3Iwv+jTA0utUVVbrh+Jlrr1Fv0e56GGzAFOXN7dk/FviaDW8LHmK52DlcH4WP2n6gI8vN1aesBFgo9w==}
     dependencies:
       yallist: 3.1.1
+    dev: false
+
+  /lucide-astro@0.379.0(astro@4.9.1):
+    resolution: {integrity: sha512-k/Ob3N8x2VRaU10TK7OF7ulSJ7mM0ttzsi45F2iglu9lm271pezV5nNxuxL3IRcuj/y3O5kcgn9+VB1X0vd0qg==}
+    peerDependencies:
+      astro: '>=2.7.1'
+    dependencies:
+      astro: 4.9.1(typescript@5.4.5)
     dev: false
 
   /magic-string@0.30.10:
