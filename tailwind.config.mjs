@@ -9,12 +9,12 @@ export default {
 				"2xl": "1400px",
 			},
 		},
-		fontFamily: {
-			sans: ["Inter", "sans-serif"],
-			display: ["Anton", "sans-serif"],
-			logo: ["Tomorrow", "sans-serif"],
-		},
 		extend: {
+			fontFamily: {
+				sans: ["Inter", "sans-serif"],
+				display: ["Anton", "sans-serif"],
+				logo: ["Tomorrow", "sans-serif"],
+			},
 			colors: {
 				border: "hsl(var(--border))",
 				ring: "hsl(var(--ring))",
@@ -43,7 +43,29 @@ export default {
 				md: "calc(var(--radius) - 2px)",
 				sm: "calc(var(--radius) - 4px)",
 			},
+			animation: {
+				"fade-up": "fade-up .5s cubic-bezier(.28,.61,.67,.99)",
+				"fade-in": "fade-in 1.2s cubic-bezier(.28,.61,.67,.99)",
+				"fade-down": "fade-down 1.2s cubic-bezier(.28,.61,.67,.99)",
+			},
+			animationDelay: {
+				"400": "400ms"
+			},
+			keyframes: {
+				"fade-up": {
+					"0%": { opacity: "0", transform: "translateY(1rem)" },
+					"100%": { opacity: "1", transform: "translateY(0)" }
+				},
+				"fade-in": {
+					"0%": { opacity: "0" },
+					"100%": { opacity: ".2" },
+				},
+				"fade-down": {
+					"0%": { transform: 'translate(1rem, -1rem)', opacity: 0 },
+					"100%": { transform: 'translate(0)', opacity: 1 }
+				}
+			},
 		},
 	},
-	plugins: [],
+	plugins: [require("tailwindcss-animate")],
 }

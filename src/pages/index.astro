@@ -11,26 +11,15 @@ import FeatureCard from "../components/FeatureCard.astro";
     <section id="intro" class="min-h-screen pt-40 pb-12">
       <div class="flex items-center flex-col sm:flex-row gap-y-8 h-full">
         <div class="w-full">
-          <h1 class="text-5xl sm:text-6xl md:text-7xl font-display leading-[1.1] sm:leading-[1.1] md:leading-[1.1] mb-8"
-              data-aos="custom-fade-up"
-              data-aos-duration="500"
-              data-aos-once="true">
+          <h1 class="text-5xl sm:text-6xl md:text-7xl font-display leading-[1.1] sm:leading-[1.1] md:leading-[1.1] mb-8 animate-fade-up fill-mode-both">
             Track jouw motorcross <br/>
             <span class="bg-clip-text text-transparent bg-gradient-to-r from-primary to-indigo-500">performance</span>
           </h1>
-          <p class="sm:text-lg lg:text-xl text-muted-foreground tracking-relaxed max-w-xl mb-12"
-             data-aos="custom-fade-up"
-             data-aos-duration="500"
-             data-aos-delay="100"
-             data-aos-once="true">
+          <p class="sm:text-lg lg:text-xl text-muted-foreground tracking-relaxed max-w-xl mb-12 animate-fade-up delay-100 fill-mode-both">
             Met Lapzy staan al jouw sessies en prestaties op één plek. Leg je snelste rondetijden vast en
             deel deze met je vrienden.
           </p>
-          <div class="flex flex-col sm:flex-row gap-4 sm:gap-6"
-               data-aos="custom-fade-up"
-               data-aos-duration="500"
-               data-aos-delay="200"
-               data-aos-once="true">
+          <div class="flex flex-col sm:flex-row gap-4 sm:gap-6 animate-fade-up duration-500 delay-200 fill-mode-both">
             <a href="https://app.lapzy.nl"
                class="bg-primary text-primary-foreground hover:bg-primary/90 sm:shadow-[0_8px_25px_-5px_rgba(0,0,0,0.25)] h-14 w-full sm:w-auto px-8 py-2 inline-flex items-center justify-center whitespace-nowrap rounded-lg font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2">Aan
               de slag</a>
@@ -42,11 +31,7 @@ import FeatureCard from "../components/FeatureCard.astro";
         <div class="relative h-full sm:mr-8 px-6 sm:px-0 shrink">
           <Image src={MockUp}
                  alt="Lapzy iPhone mockup"
-                 class="max-w-3xl w-full"
-                 data-aos="custom-fade-down"
-                 data-aos-duration="1200"
-                 data-aos-delay="400"
-                 data-aos-once="true"/>
+                 class="max-w-3xl w-full animate-fade-down delay-400 fill-mode-both" />
         </div>
       </div>
     </section>
@@ -72,11 +57,7 @@ import FeatureCard from "../components/FeatureCard.astro";
       </div>
     </section>
 
-    <div class="absolute top-full sm:top-96 right-0 md:right-32 rounded-full bg-[radial-gradient(hsl(var(--primary)),transparent)] opacity-20 h-[400px] w-[800px] md:h-[600px] lg:h-[600px] blur-[40px] -z-50"
-         data-aos="custom-fade-in"
-         data-aos-duration="1200"
-         data-aos-delay="400"
-         data-aos-once="true"></div>
+    <div class="absolute top-full sm:top-96 right-0 md:right-32 rounded-full bg-[radial-gradient(hsl(var(--primary)),transparent)] opacity-20 h-[400px] w-[800px] md:h-[600px] lg:h-[600px] blur-[40px] -z-50 animate-fade-in delay-400 fill-mode-both"></div>
   </main>
 </Layout>
 
