@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import MockUp from '../assets/mock-up.webp';
+import Dashboard from '../assets/dashboard.webp';
 import {Timer, Calendar, Share2} from 'lucide-astro'
 import {Image} from 'astro:assets';
 import FeatureCard from "../components/FeatureCard.astro";
@@ -9,55 +10,84 @@ import FeatureCard from "../components/FeatureCard.astro";
 <Layout title="Lapzy - Jouw MX performance platform">
   <main>
     <section id="intro" class="min-h-screen pt-40 pb-12">
-      <div class="flex items-center flex-col sm:flex-row gap-y-8 h-full">
-        <div class="w-full">
-          <h1 class="text-5xl sm:text-6xl md:text-7xl font-display leading-[1.1] sm:leading-[1.1] md:leading-[1.1] mb-8 animate-fade-up fill-mode-both">
-            Track jouw motorcross <br/>
-            <span class="bg-clip-text text-transparent bg-gradient-to-r from-primary to-indigo-500">performance</span>
-          </h1>
-          <p class="sm:text-lg lg:text-xl text-muted-foreground tracking-relaxed max-w-xl mb-12 animate-fade-up delay-100 fill-mode-both">
-            Met Lapzy staan al jouw sessies en prestaties op één plek. Leg je snelste rondetijden vast en
-            deel deze met je vrienden.
-          </p>
-          <div class="flex flex-col sm:flex-row gap-4 sm:gap-6 animate-fade-up duration-500 delay-200 fill-mode-both">
-            <a href="https://app.lapzy.nl"
-               class="bg-primary text-primary-foreground hover:bg-primary/90 sm:shadow-[0_8px_25px_-5px_rgba(0,0,0,0.25)] h-14 w-full sm:w-auto px-8 py-2 inline-flex items-center justify-center whitespace-nowrap rounded-lg font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2">Aan
-              de slag</a>
-            <a href="#features"
-               class="bg-background hover:bg-muted sm:shadow-[0_8px_25px_-5px_rgba(0,0,0,0.25)] h-14 px-8 py-2 border border-border inline-flex items-center justify-center whitespace-nowrap rounded-lg font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2">Meer
-              over Lapzy</a>
+      <div class="container">
+        <div class="flex items-center flex-col sm:flex-row gap-y-8 h-full">
+          <div class="w-full">
+            <h1 class="text-5xl sm:text-6xl md:text-7xl font-display leading-[1.1] sm:leading-[1.1] md:leading-[1.1] mb-8 animate-fade-up fill-mode-both">
+              Track jouw motorcross <br/>
+              <span class="bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent">performance</span>
+            </h1>
+            <p class="sm:text-lg lg:text-xl text-muted-foreground tracking-relaxed max-w-xl mb-12 animate-fade-up delay-100 fill-mode-both">
+              Lapzy is de ultieme webapp voor motorcrossers die hun prestaties naar een hoger niveau willen tillen.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 sm:gap-6 animate-fade-up duration-500 delay-200 fill-mode-both">
+              <a href="https://app.lapzy.nl"
+                 class="bg-primary text-primary-foreground hover:bg-primary/90 sm:shadow-[0_8px_25px_-5px_rgba(0,0,0,0.25)] h-12 w-full sm:w-auto px-8 inline-flex items-center justify-center whitespace-nowrap rounded-lg font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2">Aan
+                de slag</a>
+              <a href="#features"
+                 class="bg-background hover:bg-muted sm:shadow-[0_8px_25px_-5px_rgba(0,0,0,0.25)] h-12 px-8 border border-border inline-flex items-center justify-center whitespace-nowrap rounded-lg font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2">Meer
+                over Lapzy</a>
+            </div>
           </div>
-        </div>
-        <div class="relative h-full sm:mr-8 px-6 sm:px-0 shrink">
-          <Image src={MockUp}
-                 alt="Lapzy iPhone mockup"
-                 class="max-w-3xl w-full animate-fade-down delay-400 fill-mode-both" />
+          <div class="relative h-full sm:mr-8 px-6 sm:px-0 shrink">
+            <Image src={MockUp}
+                   alt="Lapzy iPhone mockup"
+                   class="max-w-3xl w-full animate-fade-down delay-400 fill-mode-both" />
+          </div>
         </div>
       </div>
     </section>
 
-    <section id="features" class="py-12">
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 lg:gap-8">
-        <FeatureCard
-                title="Stopwatch"
-                description="Gebruik de ingebouwde stopwatch om live rondetijden mee op te nemen. Ontworpen speciaal voor motorcross."
-        >
-          <Timer slot="icon" class="size-12 stroke-2 text-blue-600"/>
-        </FeatureCard>
-        <FeatureCard title="Sessie historie"
-                     description="Kijk al je sessies eenvoudig terug om te analyseren. Gebruik notities om aandachtspunten mee vast te leggen."
-                     animationDelay="100">
-          <Calendar slot="icon" class="size-12 stroke-2 text-blue-600"/>
-        </FeatureCard>
-        <FeatureCard title="Resultaten delen"
-                     description="Deel jouw snelste rondetijden met vrienden en kennissen. Zo strijd je samen voor het beste resultaat."
-                     animationDelay="200">
-          <Share2 slot="icon" class="size-12 stroke-2 text-blue-600"/>
-        </FeatureCard>
+    <section id="features" class="bg-muted py-24">
+      <div class="container">
+        <div class="grid sm:grid-cols-2 items-end gap-8 mb-16">
+          <div>
+            <div class="text-lg text-primary font-medium mb-2">Belangrijkste features</div>
+            <h1 class="text-4xl sm:text-5xl font-bold max-w-xl">Ontdek de kracht van Lapzy</h1>
+          </div>
+          <p class="text-muted-foreground">Lapzy biedt je essentiele tools om je motorcrossprestaties te verbeteren. Houd je rondetijden bij, vind eenvoudig de dichtstbijzijnde crossbaan, en analyseer je sessies als nooit tevoren.</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
+          <FeatureCard
+                  title="Stopwatch"
+                  description="Neem makkelijk live rondetijden op met de ingebouwde stopwatch."
+          >
+            <Timer slot="icon" class="size-12 stroke-2 text-blue-600"/>
+          </FeatureCard>
+          <FeatureCard title="Sessies analyseren"
+                       description="Kijk al je sessies eenvoudig terug om te analyseren."
+                       animationDelay="100">
+            <Calendar slot="icon" class="size-12 stroke-2 text-blue-600"/>
+          </FeatureCard>
+          <FeatureCard title="Logboek bijhouden"
+                       description="Maak relevante notities aan bij je opgenomen sessies."
+                       animationDelay="200">
+            <Share2 slot="icon" class="size-12 stroke-2 text-blue-600"/>
+          </FeatureCard>
+        </div>
+      </div>
+    </section>
+
+    <section id="cta" class="py-24">
+      <div class="container">
+        <div class="bg-gradient-to-r from-primary to-accent text-primary-foreground rounded-3xl p-8 sm:p-12 pb-0 sm:pb-0">
+          <div class="flex flex-col lg:flex-row justify-between lg:items-end gap-8">
+            <div class="w-full max-w-xl pb-6 sm:pb-12">
+              <h1 class="text-4xl sm:text-5xl font-bold mb-6">Start jouw eerste sessie met Lapzy</h1>
+              <p>Begin nu met het bijhouden van je rondetijden en word een betere rijder.</p>
+              <a href="https://app.lapzy.nl/register"
+                 class="bg-background text-foreground hover:bg-muted h-12 px-8 mt-8 border border-border inline-flex items-center justify-center whitespace-nowrap rounded-lg font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2">
+                Start nu
+              </a>
+            </div>
+            <Image src={Dashboard} alt="Lapzy" class="self-center lg:self-auto h-72 w-auto">
+          </div>
+        </div>
       </div>
     </section>
 
     <div class="absolute top-full sm:top-96 right-0 md:right-32 rounded-full bg-[radial-gradient(hsl(var(--primary)),transparent)] opacity-20 h-[400px] w-[800px] md:h-[600px] lg:h-[600px] blur-[40px] -z-50 animate-fade-in delay-400 fill-mode-both"></div>
+    <div class="absolute top-1/2 sm:top-32 right-0 md:-right-32 rounded-full bg-[radial-gradient(hsl(var(--accent)),transparent)] opacity-15 h-[400px] w-[800px] md:h-[600px] lg:h-[600px] blur-[40px] -z-50 animate-fade-in delay-400 fill-mode-both"></div>
   </main>
 </Layout>
 
