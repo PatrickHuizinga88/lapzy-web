@@ -50,3 +50,11 @@
     transform: translateY(0);
     opacity: 1;
 }
+
+[data-aos="custom-fade-in"] {
+    opacity: 0;
+    transition: ease-out;
+}
+[data-aos="custom-fade-in"].aos-animate {
+    opacity: 1;
+}

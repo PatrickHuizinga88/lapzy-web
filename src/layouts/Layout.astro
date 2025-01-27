@@ -1,48 +1,62 @@
 ---
 import '../styles/global.css'
-import { Image } from 'astro:assets';
+import {Image} from 'astro:assets';
 import Logo from '../assets/logo.svg';
 
 interface Props {
-	title: string;
+  title: string;
 }
 
-const { title } = Astro.props;
+const {title} = Astro.props;
 ---
 
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="sitemap" href="/sitemap-index.xml" />
-		<meta name="generator" content={Astro.generator} />
-		<script defer src="https://cloud.umami.is/script.js" data-website-id="1b5825bd-ad70-4741-9780-90940cf09d32"></script>
-		<title>{title}</title>
-	</head>
-	<body>
-	<header class="fixed top-2 sm:top-4 left-0 w-full z-50">
-		<div class="container">
-			<div class="bg-background/70 rounded-xl backdrop-blur-lg p-2">
-				<div class="flex justify-between items-center">
-					<a href="#intro">
-						<Image src={Logo} alt="Lapzy" class="h-9" />
-					</a>
-					<div class="flex gap-2 sm:gap-4">
-						<a href="https://app.lapzy.nl/login" class="hover:bg-muted text-sm h-10 px-4 py-2 inline-flex items-center justify-center whitespace-nowrap rounded-lg font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2">Inloggen</a>
-						<a href="https://app.lapzy.nl/register" class="bg-primary text-primary-foreground hover:bg-primary/90 text-sm h-10 px-4 py-2 inline-flex items-center justify-center whitespace-nowrap rounded-lg font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2">Nu registreren</a>
-					</div>
-				</div>
-			</div>
-		</div>
-	</header>
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="description" content="Astro description"/>
+  <meta name="viewport" content="width=device-width"/>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg"/>
+  <link rel="sitemap" href="/sitemap-index.xml"/>
+  <meta name="generator" content={Astro.generator}/>
+  <title>{title}</title>
+  {import.meta.env.PROD &&
+    <script defer src="https://cloud.umami.is/script.js" data-website-id="1b5825bd-ad70-4741-9780-90940cf09d32"></script>
+  }
+</head>
+<body>
+<header class="fixed top-2 sm:top-4 left-0 w-full z-50">
+  <div class="container">
+    <div class="bg-background/70 rounded-xl backdrop-blur-lg p-2 -mx-2">
+      <div class="flex justify-between items-center">
+        <a href="#intro">
+          <Image src={Logo} alt="Lapzy" class="h-9"/>
+        </a>
+        <div class="flex gap-2 sm:gap-4">
+          <a href="https://app.lapzy.nl/login"
+             class="hover:bg-muted text-sm h-10 px-4 py-2 inline-flex items-center justify-center whitespace-nowrap rounded-lg font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2">Inloggen</a>
+          <a href="https://app.lapzy.nl/register"
+             class="bg-primary text-primary-foreground hover:bg-primary/90 text-sm h-10 px-4 py-2 inline-flex items-center justify-center whitespace-nowrap rounded-lg font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2">Nu
+            registreren</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
 
-	<slot />
+<slot/>
 
-	<script src="../utils/aos.js"></script>
-	</body>
+<footer class="bg-muted py-6 sm:py-8">
+  <div class="container">
+    <div class="flex justify-between items-center">
+      <Image src={Logo} alt="Lapzy" class="h-9"/>
+      <p class="text-muted-foreground">© 2025 Lapzy</p>
+    </div>
+  </div>
+</footer>
+
+<script src="../utils/aos.js"></script>
+</body>
 </html>
 
 <style is:global>
